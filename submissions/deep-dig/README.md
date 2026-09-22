@@ -11,6 +11,8 @@ Walk your owned Rare Friend through a resonance minefield, collect simulated RF,
 
 **All RF is simulated. The preview requires no RF funding, signatures or transactions.**
 
+![Deep Dig gameplay with a Rare Friend, an orb, flagged tiles and simulated RF rewards](https://raw.githubusercontent.com/chimph/rf-deep-dig/fe6bc2cd9a3c54f5e1dc6171b55817127fd6b585/games/deep-dig/gameplay.png)
+
 ## Rare Friends integration
 
 Connect an injected browser wallet holding a hardwired Rare Friends Generations NFT, generation 1 or higher, on Robinhood mainnet (chain 4663). The official SDK runtime connects the wallet, discovers owned Friends, checks fresh ownership/eligibility and resolves the canonical NFT wallet. The selected Friend's canonical artwork appears on the board.
