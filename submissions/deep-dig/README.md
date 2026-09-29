@@ -5,7 +5,7 @@
 - **Category:** Economy Potential
 - **Playable preview:** https://chimph.github.io/rf-deep-dig/
 - **Source:** https://github.com/chimph/rf-deep-dig
-- **Stack:** React 19, TypeScript and FriendSDK v0.1.2, with documented local runtime extensions.
+- **Stack:** React 19, TypeScript and FriendSDK v0.1.4, with documented local runtime extensions.
 
 Walk your owned Rare Friend through a resonance minefield, collect simulated RF, and decide whether to bank your haul or risk a deeper level.
 
@@ -17,7 +17,7 @@ Walk your owned Rare Friend through a resonance minefield, collect simulated RF,
 
 Connect an injected browser wallet holding a hardwired Rare Friends Generations NFT, generation 1 or higher, on Robinhood mainnet (chain 4663). The official SDK runtime connects the wallet, discovers owned Friends, checks fresh ownership/eligibility and resolves the canonical NFT wallet. The selected Friend's canonical artwork appears on the board.
 
-The included runtime adds a paged artwork gallery, a Settings shortcut to choose a Friend, cached selected artwork reuse and remembered sound. These are local extensions, not claimed upstream v0.1.2 features. The sandbox and ownership gate remain intact. [SDK integration](https://github.com/chimph/rf-deep-dig/blob/main/SDK.md)
+The included runtime adds a paged artwork gallery, a Settings shortcut to choose a Friend, cached selected artwork reuse and remembered sound. These are local extensions, not claimed upstream v0.1.4 features. The sandbox and ownership gate remain intact. The v0.1.4 update adds owner-filtered history pagination for the public RPC and removes unused transaction and signing code from the simulated preview bundles. [SDK integration](https://github.com/chimph/rf-deep-dig/blob/main/SDK.md)
 
 ## Run locally
 
@@ -62,9 +62,9 @@ The SDK's fixed outcome metadata is compatibility data, not a model of a complet
 
 ## Checks and known limitations
 
-All 87 retained unit tests, typechecks, game validation, wallet and paged-picker browser checks, offline save/migration tests, idle-refund checks, style parity and the production build passed. [CI results](https://github.com/chimph/rf-deep-dig/actions/runs/35673536179)
+All 90 retained unit tests, typechecks, game validation, wallet and paged-picker browser checks, offline save/migration tests, idle-refund checks, style parity and the production build passed. [CI results](https://github.com/chimph/rf-deep-dig/actions/runs/36633519727)
 
-The deployed files matched the tested Pages artifact. Desktop and portrait mobile checks verified the unmodified missing-wallet gate; isolated mock-wallet/RPC contexts exercised canonical artwork, entry, extraction, sound persistence and network cancellation. **A complete manual eligible-wallet playthrough on the new URL has not been formally recorded.** These automated tests are not presented as that manual verification. [Verification details](https://github.com/chimph/rf-deep-dig/blob/main/games/deep-dig/SUBMISSION-CHECKS.md)
+The deployed files matched the tested Pages artifact. Preview-bundle regression checks verify that transaction, approval and signing capabilities are excluded from both generated JavaScript bundles. Desktop and portrait mobile checks verified the unmodified missing-wallet gate; isolated mock-wallet/RPC contexts exercised canonical artwork, entry, extraction, sound persistence and network cancellation. **A complete manual eligible-wallet playthrough on the new URL has not been formally recorded.** These automated tests are not presented as that manual verification. [Verification details](https://github.com/chimph/rf-deep-dig/blob/main/games/deep-dig/SUBMISSION-CHECKS.md)
 
 Progress and the pool are session-local and reset on refresh or wallet/network/Friend changes. There is no shared production pool, durable online save, hidden-board server, anti-cheat guarantee or real-value settlement. The separate offline build retains browser saves but is not the submitted wallet-gated preview. No real player funds are held or paid.
 
@@ -74,6 +74,6 @@ The [live-release plan](https://github.com/chimph/rf-deep-dig/blob/main/games/de
 
 ## Credits and licensing
 
-FriendSDK v0.1.2 supplies the runtime, wallet integration and canonical Generations artwork. The game uses Silkscreen under the SIL Open Font License. Board vectors and effects are original project assets; procedural sound uses SDK samples and original orb, mine and ground-find synthesis. [Asset notices](https://github.com/chimph/rf-deep-dig/blob/main/NOTICE.md) · [Font licence](https://github.com/chimph/rf-deep-dig/blob/main/games/deep-dig/fonts/Silkscreen-OFL.txt)
+FriendSDK v0.1.4 supplies the runtime, wallet integration and canonical Generations artwork. The game uses Silkscreen under the SIL Open Font License. Board vectors and effects are original project assets; procedural sound uses SDK samples and original orb, mine and ground-find synthesis. [Asset notices](https://github.com/chimph/rf-deep-dig/blob/main/NOTICE.md) · [Font licence](https://github.com/chimph/rf-deep-dig/blob/main/games/deep-dig/fonts/Silkscreen-OFL.txt)
 
 [Project licensing](https://github.com/chimph/rf-deep-dig/blob/main/LICENSE) permits inspection, private testing and judging of covered Deep Dig material. FriendSDK and third-party assets retain their own terms. A commercial launch of material covered by the evaluation terms requires separate permission.
